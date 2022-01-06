@@ -1,0 +1,66 @@
+baseURL: ""
+languageCode: en-us
+title: Example
+theme: cupper-hugo-theme
+defaultContentLanguage: en
+relativeURLs: true
+
+taxonomies:
+  tag: tags
+
+permalinks:
+  post: /:sections/:year/:filename/
+
+imaging:
+  quality: 99
+
+params:
+  navTitleText: Test
+  description: ''
+  homeMetaContent: Test
+  footer: '[Hugo](https://gohugo.io/), [Cupper](https://github.com/zwbetz-gh/cupper-hugo-theme).'
+  dateFormat: 2006-01-02
+  codePenUser: example
+  katex: true
+  hideHeaderLinks: false
+  search: true
+  showThemeSwitcher: true
+  defaultDarkTheme: false
+  moveFooterToHeader: false
+
+menu:
+  nav:
+    - name: About
+      url: /
+      weight: 1
+
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      strikethrough: true
+      table: true
+      taskList: true
+      typographer: true
+    parser:
+      attribute: true
+      autoHeadingID: true
+    renderer:
+      hardWraps: false
+      unsafe: true
+      xHTML: false
+  highlight:
+    codeFences: false
+    hl_Lines: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: true
+    style: monokai
+    tabWidth: 4
+  tableOfContents:
+    endLevel: 6
+    startLevel: 2
